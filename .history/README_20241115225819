@@ -1,0 +1,13 @@
+Node Version: v16.15.1
+
+## Vite
+
+brew install vite
+
+# Commands for Vite
+
+* Start a project
+'''
+npm install -D vite
+'''
+

@@ -1,0 +1,14 @@
+Node Version: v16.15.1
+
+## Vite
+
+brew install vite
+npm install -D vite
+
+# Commands for Vite
+Start a project
+
+```
+npm create vite@latest <name-of-react-project> --template react
+```
+
