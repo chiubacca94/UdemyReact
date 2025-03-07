@@ -1,8 +1,10 @@
 Node Version: v16.15.1
 
 ## Vite
-
+(mac)
 brew install vite
+
+(etc)
 npm install -D vite
 
 # Commands for Vite
