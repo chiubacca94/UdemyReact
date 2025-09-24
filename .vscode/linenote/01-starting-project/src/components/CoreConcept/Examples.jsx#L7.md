@@ -1,0 +1,1 @@
+Since this state stuff is here, only Examples component will reload, not the whole App that contains the Header and the random changes text.
