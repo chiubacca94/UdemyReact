@@ -1,22 +1,20 @@
-import { useState } from "react";
-
 const initialGameboard = [
     [null, null, null],
     [null, null, null],
     [null, null, null]
 ];
 
-export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
-    const [gameboard, setGameboard] = useState(initialGameboard);
+export default function GameBoard({ onSelectSquare, turns }) {
+    let gameboard = initialGameboard;
 
-    function handleSelectSquare(rowIndex, colIndex) {
-        setGameboard((prevGameBoard) => {
-            const updatedGameBoard = prevGameBoard.map(innerArr => [...innerArr]);    
-            updatedGameBoard[rowIndex][colIndex] = activePlayerSymbol;
-            return updatedGameBoard;
-        });
+    // Deriving state from gameturns in the App component
+    for (const turn of turns) {
+        // square: {row: rowIndex, col: colIndex}
+        const { square, player } = turn;
+        const { row, col } = square;
 
-        onSelectSquare();
+        gameboard[row][col] = player;
+
     }
 
     return (

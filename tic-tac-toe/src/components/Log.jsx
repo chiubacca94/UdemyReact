@@ -1,7 +1,7 @@
 export default function Log() {
     return (
         <ol id="log">
-            {/* Log content will go here */}
+            {/* Log content will go here for turns */}
         </ol>
     );
 }
