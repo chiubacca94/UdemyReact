@@ -22,7 +22,7 @@ function derviveGameboard(turns) {
 let gameboard = [...INITIAL_GAMEBOARD.map(array => [...array])];
 
   // Deriving state from gameturns in the App component
-  for (const turn of gameTurns) {
+  for (const turn of turns) {
         // square: {row: rowIndex, col: colIndex}
         const { square, player } = turn;
         const { row, col } = square;
@@ -43,7 +43,7 @@ function deriveActivePlayer(turns) {
   return currentPlayer; 
 }
 
-function derviveWinner(gameboard) {
+function derviveWinner(gameboard, playerNames) {
 let winner = null;
 
     for (const combination of WINNING_COMBINATIONS) {
@@ -70,7 +70,7 @@ function App() {
 
   const gameboard = derviveGameboard(gameTurns);
 
-  const winner = derviveWinner(gameboard);
+  const winner = derviveWinner(gameboard, playerNames);
   
   const isDraw = gameTurns.length === 9 && !winner;
 
