@@ -12,6 +12,7 @@ export default function Player() {
 
   return (
     <section id="player">
+      {/* playerName.current.value will be undefined at first render */}
       <h2>Welcome {enteredPlayerName ?? 'unknown entity'}</h2>
       <p>
         <input ref={playerName} type="text"/>
