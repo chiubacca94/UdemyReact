@@ -1,8 +1,12 @@
+import ProjectSidebar from "./components/ProjectSidebar";
+
 function App() {
   return (
-    <>
-      <h1 className="my-8 text-center text-5xl font-bold">Hello World</h1>
-    </>
+    // h-screen is the full height of the screen
+    // my-2 is a margin of 2 units
+    <main className="h-screen my-2">
+      <ProjectSidebar />
+    </main>
   );
 }
 
